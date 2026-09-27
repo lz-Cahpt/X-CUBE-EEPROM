@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Release Notes for X-CUBE-EEPROM Package</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="_htmresc/mini-st_2020.css" />
+  <link rel="icon" type="image/x-icon" href="_htmresc/favicon.png" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="row">
+<div class="col-sm-12 col-lg-4">
+<center>
+<h1 id="release-notes-for">Release Notes for</h1>
+<h1 id="stm32u3xx-hal-drivers"><mark>X-CUBE-EEPROM Package</mark></h1>
+<p>Copyright © 2025 STMicroelectronics</p>
+<a href="https://www.st.com" class="logo"><img
+src="_htmresc/st_logo_2020.png" alt="ST logo" /></a>
+</center>
+<h1 id="purpose">Purpose</h1>
+<p>The <strong>X-CUBE-EEPROM</strong> package is associated to the <strong>AN4894 How to use EEPROM emulation on STM32 MCUs</strong> which aims at providing firmware examples to substitute a standalone EEPROM by emulating the EEPROM mechanism using the on-chip Flash devices. For the STM32WB Series a special example is provided to emulate an EEPROM alongside the Heart Rate BLE application. For the STM32H5 Series a special example is provided to emulate the EEPROM mechanism in the high cycle data area.</p>
+<figure>
+<img src="_htmresc/package_architecture.PNG" alt="" /><figcaption>Package architecture</figcaption>
+</figure>
+<p>Here is the list of references to user documents:</p>
+<ul>
+<li><dl>
+<dt><a href="https://www.st.com/resource/en/application_note/dm00311483-eeprom-emulation-techniques-and-software-for-stm32-microcontrollers-stmicroelectronics.pdf">DM00311483</a></dt>
+<dd>AN4894 How to use EEPROM emulation on STM32 MCUs
+</dd>
+</dl></li>
+</ul>
+</div>
+<section id="update-history" class="col-sm-12 col-lg-8">
+<h1>Update History</h1>
+<div class="collapse">
+<input type="checkbox" id="collapse-section10" checked aria-hidden="true"> <label for="collapse-section10" aria-hidden="true">V9.0.0 / 22-June-2026</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<li>Package update : STM32WL3 Series supported.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New devices supported: STM32WL3 Series.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V5.4.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0 CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WB CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WBxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WL CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WLxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32C0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32H5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32H5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32U0 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U3 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U3xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32WL3 CMSIS</strong></td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WL3X/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32L5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WBXX_HAL_Driver</td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WBxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLXX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WLxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.1</td>
+<td style="text-align: left;"><a href="Drivers/STM32C0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32H5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32H5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32U0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U3XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U3xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32WL3X_HAL_Driver</strong></td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WL3x_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G_EVAL BSP driver</td>
+<td style="text-align: left;">V2.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G_EVAL/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G4xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P-NUCLEO-WB55.Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/P-NUCLEO-WB55.Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLxx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32WLxx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32C0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32H5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32H5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32U0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U3xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U3xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32WL3x_Nucleo BSP driver</strong></td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32WL3x-Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32L5/EEPROM_Emul/NUCLEO-L552ZE-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G0/EEPROM_Emul/NUCLEO-G071RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G431RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32WB/EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WB/BLE_HeartRate_EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API in parallel with a BLE application (Heart Rate app for the example).</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G474RE: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WL/EEPROM_Emul/NUCLEO-WL55JC: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32U5/EEPROM_Emul/NUCLEO-U575ZI-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32C0/EEPROM_Emul/NUCLEO-C031C6: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32H5/EEPROM_Emul/NUCLEO-H563ZI: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32U0/EEPROM_Emul/NUCLEO-U031R8: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32U3/EEPROM_Emul/NUCLEO-U385RG-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>/STM32WL3x/EEPROM_Emul/NUCLEO-WL33CC: Application to show how to implement the EEPROM emulation API.</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.70.2 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.38.0.0 + ST-LINK + Pack Keil for the according STM32Series</li>
+<li>STM32CubeIDE toolchain V1.19.0 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+<li>NUCLEO-L552ZE-Q</li>
+<li>NUCLEO-G071RB</li>
+<li>NUCLEO-G431RB</li>
+<li>NUCLEO-G474RE</li>
+<li>P-NUCLEO-WB55.Nucleo</li>
+<li>NUCLEO-WL55JC</li>
+<li>NUCLEO-U575ZI-Q</li>
+<li>NUCLEO-C031C6</li>
+<li>NUCLEO-H563ZI</li>
+<li>NUCLEO-U031R8</li>
+<li>NUCLEO-U385RG-Q</li>
+<li>NUCLEO-WL33CC</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>The STM32WB/BLE_HeartRate_EEPROM_Emul example requests having the stm32wb5x_BLE_Stack_fw.bin binary flashed on the Wireless Coprocessor.</p>
+<p>If it is not the case, you need to use STM32CubeProgrammer to load the appropriate binary.</p>
+<p>Those binaries are located under the /Projects/STM32_Copro_Wireless_Binaries directory in the STM32Cube_FW_WB package available on st.com.</p>
+<p>Refer to UM2237 to learn how to use/install STM32CubeProgrammer.</p>
+<p>Refer to /Projects/STM32_Copro_Wireless_Binaries/ReleaseNote.html in the STM32Cube_FW_WB package for the detailed procedure to change the Wireless Coprocessor binary.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section9" aria-hidden="true"> <label for="collapse-section9" aria-hidden="true">V8.0.0 / 13-March-2025</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<li>Package update : STM32U3 Series supported.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New devices supported: STM32U3 Series.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V5.4.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0 CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WB CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WBxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WL CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WLxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32C0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32H5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32H5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32U0 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>STM32U3 CMSIS</strong></td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U3xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32L5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WBXX_HAL_Driver</td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WBxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WLXX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WLxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32U5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32C0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.1</td>
+<td style="text-align: left;"><a href="Drivers/STM32C0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32H5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32H5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32U3XX_HAL_Driver</strong></td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U3xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G_EVAL BSP driver</td>
+<td style="text-align: left;">V2.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G_EVAL/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G4xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P-NUCLEO-WB55.Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/P-NUCLEO-WB55.Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLxx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32WLxx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32C0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32H5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32H5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32U0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>STM32U3xx_Nucleo BSP driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U3xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32L5/EEPROM_Emul/NUCLEO-L552ZE-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G0/EEPROM_Emul/NUCLEO-G071RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G431RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32WB/EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WB/BLE_HeartRate_EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API in parallel with a BLE application (Heart Rate app for the example).</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G474RE: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WL/EEPROM_Emul/NUCLEO-WL55JC: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32U5/EEPROM_Emul/NUCLEO-U575ZI-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32C0/EEPROM_Emul/NUCLEO-C031C6: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32H5/EEPROM_Emul/NUCLEO-H563ZI: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32U0/EEPROM_Emul/NUCLEO-U031R8: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>/STM32U3/EEPROM_Emul/NUCLEO-U385RG-Q: Application to show how to implement the EEPROM emulation API.</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.50.2 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.38.0.0 + ST-LINK + Pack Keil for the according STM32Series</li>
+<li>STM32CubeIDE toolchain V1.13.2 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+<li>NUCLEO-L552ZE-Q</li>
+<li>NUCLEO-G071RB</li>
+<li>NUCLEO-G431RB</li>
+<li>NUCLEO-G474RE</li>
+<li>P-NUCLEO-WB55.Nucleo</li>
+<li>NUCLEO-WL55JC</li>
+<li>NUCLEO-U575ZI-Q</li>
+<li>NUCLEO-C031C6</li>
+<li>NUCLEO-H563ZI</li>
+<li>NUCLEO-U031R8</li>
+<li>NUCLEO-U385RG-Q</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>The STM32WB/BLE_HeartRate_EEPROM_Emul example requests having the stm32wb5x_BLE_Stack_fw.bin binary flashed on the Wireless Coprocessor.</p>
+<p>If it is not the case, you need to use STM32CubeProgrammer to load the appropriate binary.</p>
+<p>Those binaries are located under the /Projects/STM32_Copro_Wireless_Binaries directory in the STM32Cube_FW_WB package available on st.com.</p>
+<p>Refer to UM2237 to learn how to use/install STM32CubeProgrammer.</p>
+<p>Refer to /Projects/STM32_Copro_Wireless_Binaries/ReleaseNote.html in the STM32Cube_FW_WB package for the detailed procedure to change the Wireless Coprocessor binary.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section8" aria-hidden="true"> <label for="collapse-section8" aria-hidden="true">V7.0.0 / 19-March-2024</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<li>Package update : STM32U0 Series supported.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New devices supported: STM32U0 Series, fixed a compilation error due to a missing file.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V5.4.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0 CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WB CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WBxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WL CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WLxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32C0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32H5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32H5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32U0 CMSIS</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32H5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32L5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WBXX_HAL_Driver</td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WBxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLXX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WLxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.1</td>
+<td style="text-align: left;"><a href="Drivers/STM32C0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32H5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32H5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32U0XX_HAL_Driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G_EVAL BSP driver</td>
+<td style="text-align: left;">V2.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G_EVAL/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G4xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P-NUCLEO-WB55.Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/P-NUCLEO-WB55.Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLxx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32WLxx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32C0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32H5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32H5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>STM32U0xx_Nucleo BSP driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32L5/EEPROM_Emul/NUCLEO-L552ZE-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G0/EEPROM_Emul/NUCLEO-G071RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G431RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32WB/EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WB/BLE_HeartRate_EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API in parallel with a BLE application (Heart Rate app for the example).</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G474RE: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WL/EEPROM_Emul/NUCLEO-WL55JC: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32U5/EEPROM_Emul/NUCLEO-U575ZI-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32C0/EEPROM_Emul/NUCLEO-C031C6: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32H5/EEPROM_Emul/NUCLEO-H563ZI: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>/STM32U0/EEPROM_Emul/NUCLEO-U031R8: Application to show how to implement the EEPROM emulation API.</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.30.1 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.38.0.0 + ST-LINK + Pack Keil for the according STM32Series</li>
+<li>STM32CubeIDE toolchain V1.12.1 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+<li>NUCLEO-L552ZE-Q</li>
+<li>NUCLEO-G071RB</li>
+<li>NUCLEO-G431RB</li>
+<li>NUCLEO-G474RE</li>
+<li>P-NUCLEO-WB55.Nucleo</li>
+<li>NUCLEO-WL55JC</li>
+<li>NUCLEO-U575ZI-Q</li>
+<li>NUCLEO-C031C6</li>
+<li>NUCLEO-H563ZI</li>
+<li>NUCLEO-U031R8</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>The STM32WB/BLE_HeartRate_EEPROM_Emul example requests having the stm32wb5x_BLE_Stack_fw.bin binary flashed on the Wireless Coprocessor.</p>
+<p>If it is not the case, you need to use STM32CubeProgrammer to load the appropriate binary.</p>
+<p>Those binaries are located under the /Projects/STM32_Copro_Wireless_Binaries directory in the STM32Cube_FW_WB package available on st.com.</p>
+<p>Refer to UM2237 to learn how to use/install STM32CubeProgrammer.</p>
+<p>Refer to /Projects/STM32_Copro_Wireless_Binaries/ReleaseNote.html in the STM32Cube_FW_WB package for the detailed procedure to change the Wireless Coprocessor binary.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section7" aria-hidden="true"> <label for="collapse-section7" aria-hidden="true">V6.0.0 / 4-July-2023</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<li>Package update : STM32H5 Series supported.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New devices supported: STM32H5 Series.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V5.4.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0 CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WB CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WBxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WL CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WLxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32C0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>STM32H5 CMSIS</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32H5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32L5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WBXX_HAL_Driver</td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WBxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WLXX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WLxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32U5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32C0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.1</td>
+<td style="text-align: left;"><a href="Drivers/STM32C0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32H5XX_HAL_Driver</strong></td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32H5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G_EVAL BSP driver</td>
+<td style="text-align: left;">V2.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G_EVAL/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G4xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P-NUCLEO-WB55.Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/P-NUCLEO-WB55.Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLxx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32WLxx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32C0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32C0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>STM32H5xx_Nucleo BSP driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32H5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32L5/EEPROM_Emul/NUCLEO-L552ZE-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G0/EEPROM_Emul/NUCLEO-G071RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G431RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32WB/EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WB/BLE_HeartRate_EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API in parallel with a BLE application (Heart Rate app for the example).</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G474RE: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WL/EEPROM_Emul/NUCLEO-WL55JC: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32U5/EEPROM_Emul/NUCLEO-U575ZI-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32C0/EEPROM_Emul/NUCLEO-C031C6: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>/STM32H5/EEPROM_Emul/NUCLEO-H563ZI: Application to show how to implement the EEPROM emulation API.</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.30.1 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.38.0.0 + ST-LINK + Pack Keil for the according STM32Series</li>
+<li>STM32CubeIDE toolchain V1.12.1 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+<li>NUCLEO-L552ZE-Q</li>
+<li>NUCLEO-G071RB</li>
+<li>NUCLEO-G431RB</li>
+<li>NUCLEO-G474RE</li>
+<li>P-NUCLEO-WB55.Nucleo</li>
+<li>NUCLEO-WL55JC</li>
+<li>NUCLEO-U575ZI-Q</li>
+<li>NUCLEO-C031C6</li>
+<li>NUCLEO-H563ZI</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>The STM32WB/BLE_HeartRate_EEPROM_Emul example requests having the stm32wb5x_BLE_Stack_fw.bin binary flashed on the Wireless Coprocessor.</p>
+<p>If it is not the case, you need to use STM32CubeProgrammer to load the appropriate binary.</p>
+<p>Those binaries are located under the /Projects/STM32_Copro_Wireless_Binaries directory in the STM32Cube_FW_WB package available on st.com.</p>
+<p>Refer to UM2237 to learn how to use/install STM32CubeProgrammer.</p>
+<p>Refer to /Projects/STM32_Copro_Wireless_Binaries/ReleaseNote.html in the STM32Cube_FW_WB package for the detailed procedure to change the Wireless Coprocessor binary.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section6" aria-hidden="true"> <label for="collapse-section6" aria-hidden="true">V5.0.0 / 12-January-2023</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<li>Package update : STM32C0 Series supported.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New devices supported: STM32C0 Series.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V5.4.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32L5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0 CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32G4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WB CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WBxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WL CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32WLxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32U5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32C0 CMSIS</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/Device/ST/STM32C0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32L5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WBXX_HAL_Driver</td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WBxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLXX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WLxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32C0XX_HAL_Driver</strong></td>
+<td style="text-align: left;">V1.0.1</td>
+<td style="text-align: left;"><a href="Drivers/STM32C0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G_EVAL BSP driver</td>
+<td style="text-align: left;">V2.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G_EVAL/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G4xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P-NUCLEO-WB55.Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/P-NUCLEO-WB55.Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLxx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32WLxx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32U5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32C0xx_Nucleo BSP driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32C0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32L5/EEPROM_Emul/NUCLEO-L552ZE-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G0/EEPROM_Emul/NUCLEO-G071RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G431RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32WB/EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WB/BLE_HeartRate_EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API in parallel with a BLE application (Heart Rate app for the example).</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G474RE: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WL/EEPROM_Emul/NUCLEO-WL55JC: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32U5/EEPROM_Emul/NUCLEO-U575ZI-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>/STM32C0/EEPROM_Emul/NUCLEO-C031C6: Application to show how to implement the EEPROM emulation API.</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.30.1 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.38.0.0 + ST-LINK + Pack Keil for the according STM32Series</li>
+<li>STM32CubeIDE toolchain V1.10.1 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+<li>NUCLEO-L552ZE-Q</li>
+<li>NUCLEO-G071RB</li>
+<li>NUCLEO-G431RB</li>
+<li>NUCLEO-G474RE</li>
+<li>P-NUCLEO-WB55.Nucleo</li>
+<li>NUCLEO-WL55JC</li>
+<li>NUCLEO-U575ZI-Q</li>
+<li>NUCLEO-C031C6</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>The STM32WB/BLE_HeartRate_EEPROM_Emul example requests having the stm32wb5x_BLE_Stack_fw.bin binary flashed on the Wireless Coprocessor.</p>
+<p>If it is not the case, you need to use STM32CubeProgrammer to load the appropriate binary.</p>
+<p>Those binaries are located under the /Projects/STM32_Copro_Wireless_Binaries directory in the STM32Cube_FW_WB package available on st.com.</p>
+<p>Refer to UM2237 to learn how to use/install STM32CubeProgrammer.</p>
+<p>Refer to /Projects/STM32_Copro_Wireless_Binaries/ReleaseNote.html in the STM32Cube_FW_WB package for the detailed procedure to change the Wireless Coprocessor binary.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section5" aria-hidden="true"> <label for="collapse-section5" aria-hidden="true">V4.0.0 / 29-November-2021</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<li>Package update : STM32U5 Series supported.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New devices supported: STM32U5 Series.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Management of the cache coherency when activated.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V5.4.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32L5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0 CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32G0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32G4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WB CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32WBxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WL CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32WLxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>STM32U5 CMSIS</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32U5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32L5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WBXX_HAL_Driver</td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WBxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLXX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WLxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32U5XX_HAL_Driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32U5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G_EVAL BSP driver</td>
+<td style="text-align: left;">V2.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G_EVAL/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G4xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P-NUCLEO-WB55.Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/P-NUCLEO-WB55.Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WLxx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32WLxx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32U5xx_Nucleo BSP driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32U5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32L5/EEPROM_Emul/NUCLEO-L552ZE-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G0/EEPROM_Emul/NUCLEO-G071RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G431RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32WB/EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WB/BLE_HeartRate_EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API in parallel with a BLE application (Heart Rate app for the example).</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G474RE: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WL/EEPROM_Emul/NUCLEO-WL55JC: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>/STM32U5/EEPROM_Emul/NUCLEO-U575ZI-Q: Application to show how to implement the EEPROM emulation API.</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">V1.0.0</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V9.10.1 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.32.0.0 + ST-LINK + Pack Keil for the according STM32Series</li>
+<li>STM32CubeIDE toolchain V1.7.0 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+<li>NUCLEO-L552ZE-Q</li>
+<li>NUCLEO-G071RB</li>
+<li>NUCLEO-G431RB</li>
+<li>NUCLEO-G474RE</li>
+<li>P-NUCLEO-WB55.Nucleo</li>
+<li>NUCLEO-WL55JC</li>
+<li>NUCLEO-U575ZI-Q</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>The STM32WB/BLE_HeartRate_EEPROM_Emul example requests having the stm32wb5x_BLE_Stack_fw.bin binary flashed on the Wireless Coprocessor.</p>
+<p>If it is not the case, you need to use STM32CubeProgrammer to load the appropriate binary.</p>
+<p>Those binaries are located under the /Projects/STM32_Copro_Wireless_Binaries directory in the STM32Cube_FW_WB package available on st.com.</p>
+<p>Refer to UM2237 to learn how to use/install STM32CubeProgrammer.</p>
+<p>Refer to /Projects/STM32_Copro_Wireless_Binaries/ReleaseNote.html in the STM32Cube_FW_WB package for the detailed procedure to change the Wireless Coprocessor binary.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section4" aria-hidden="true"> <label for="collapse-section4" aria-hidden="true">V3.0.0 / 20-October-2020</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<li>Package update : STM32WL Series supported, dual bank feature compatibility for STM32G4 products, cache coherency management.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New devices supported: STM32WL Series.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Support of the dual bank feature for the STM32G4 products compatible (it was already in place for other products that have the dual bank feature). New example for the NUCLEO-G474RE provided for demonstration.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Management of the cache coherency when activated (especially the MPU is used for the STM32L5 products).</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V4.5.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32L5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0 CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32G0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32G4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WB CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32WBxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32L5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WBXX_HAL_Driver</td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WBxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G_EVAL BSP driver</td>
+<td style="text-align: left;">V2.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G_EVAL/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G4xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P-NUCLEO-WB55.Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/P-NUCLEO-WB55.Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32WLxx_Nucleo BSP driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32WLxx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>STM32WL CMSIS</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32WLxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>STM32WLXX_HAL_Driver</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WLxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32L5/EEPROM_Emul/NUCLEO-L552ZE-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G0/EEPROM_Emul/NUCLEO-G071RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G431RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32WB/EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WB/BLE_HeartRate_EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API in parallel with a BLE application (Heart Rate app for the example).</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G474RE: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>/STM32WL/EEPROM_Emul/NUCLEO-WL55JC: Application to show how to implement the EEPROM emulation API.</strong></td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V8.42.2 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.29.0.0 + ST-LINK + Pack Keil for the according STM32Series</li>
+<li>STM32CubeIDE toolchain V1.2.0 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+<li>NUCLEO-L552ZE-Q</li>
+<li>NUCLEO-G071RB</li>
+<li>NUCLEO-G431RB</li>
+<li>NUCLEO-G474RE</li>
+<li>P-NUCLEO-WB55.Nucleo</li>
+<li>NUCLEO-WL55JC</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>The STM32WB/BLE_HeartRate_EEPROM_Emul example requests having the stm32wb5x_BLE_Stack_fw.bin binary flashed on the Wireless Coprocessor.</p>
+<p>If it is not the case, you need to use STM32CubeProgrammer to load the appropriate binary.</p>
+<p>Those binaries are located under the /Projects/STM32_Copro_Wireless_Binaries directory in the STM32Cube_FW_WB package available on st.com.</p>
+<p>Refer to UM2237 to learn how to use/install STM32CubeProgrammer.</p>
+<p>Refer to /Projects/STM32_Copro_Wireless_Binaries/ReleaseNote.html in the STM32Cube_FW_WB package for the detailed procedure to change the Wireless Coprocessor binary.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section3" aria-hidden="true"> <label for="collapse-section3" aria-hidden="true">V2.0.0 / 1-March-2020</label>
+<div>
+<h2 id="main-changes-2">Main Changes</h2>
+<li>Package update : STM32L5, STM32G0, STM32 G4, STM32WB Series supportedand new BLE+EEPROM_Emul example added.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">New devices supported: STM32L5 Series, STM32G0 Series, STM32G4 Series, STM32WB Series.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">New specific example BLE_HeartRate_EEPROM_Emul for STM32WB Series: Maintains a BLE communication (Hear Rate app) while processing EEPROM emulation.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-2">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V4.5.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5 CMSIS</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32L5xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0 CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32G0xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4 CMSIS</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32G4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32WB CMSIS</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32WBxx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L5XX_HAL_Driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32L5xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G0XX_HAL_Driver</td>
+<td style="text-align: left;">V1.3.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G0xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32G4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32WBXX_HAL_Driver</td>
+<td style="text-align: left;">V1.4.0</td>
+<td style="text-align: left;"><a href="Drivers/STM32WBxx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G_EVAL BSP driver</td>
+<td style="text-align: left;">V2.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G_EVAL/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L5xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L5xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32G0xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.1.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G0xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32G4xx_Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32G4xx_Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P-NUCLEO-WB55.Nucleo BSP driver</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/P-NUCLEO-WB55.Nucleo/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32L5/EEPROM_Emul/NUCLEO-L552ZE-Q: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32G0/EEPROM_Emul/NUCLEO-G071RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32G4/EEPROM_Emul/NUCLEO-G431RB: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32WB/EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">/STM32WB/BLE_HeartRate_EEPROM_Emul/P-NUCLEO-WB55.Nucleo: Application to show how to implement the EEPROM emulation API in parallel with a BLE application (Heart Rate app for the example).</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-2">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-2">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V8.42.2 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.29.0.0 + ST-LINK + Pack Keil for the according STM32Series</li>
+<li>STM32CubeIDE toolchain V1.2.0 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-2">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+<li>NUCLEO-L552ZE-Q</li>
+<li>NUCLEO-G071RB</li>
+<li>NUCLEO-G431RB</li>
+<li>P-NUCLEO-WB55.Nucleo</li>
+</ul>
+<h2 id="backward-compatibility-1">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-2">Dependencies</h2>
+<p>The STM32WB/BLE_HeartRate_EEPROM_Emul example requests having the stm32wb5x_BLE_Stack_fw.bin binary flashed on the Wireless Coprocessor.</p>
+<p>If it is not the case, you need to use STM32CubeProgrammer to load the appropriate binary.</p>
+<p>Those binaries are located under the /Projects/STM32_Copro_Wireless_Binaries directory in the STM32Cube_FW_WB package available on st.com.</p>
+<p>Refer to UM2237 to learn how to use/install STM32CubeProgrammer.</p>
+<p>Refer to /Projects/STM32_Copro_Wireless_Binaries/ReleaseNote.html in the STM32Cube_FW_WB package for the detailed procedure to change the Wireless Coprocessor binary.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section2" aria-hidden="true"> <label for="collapse-section2" aria-hidden="true">V1.2.0 / 24-August-2018</label>
+<div>
+<h2 id="main-changes-1">Main Changes</h2>
+<li>Package update : STM32L4+ Series supported.</li>
+<h3 id="additional-features"><strong>Additional features</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">EEPROM emulation example for L4+ added.</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents-1">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V4.5.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.4.2</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.8.2</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.1</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4xx_Nucleo_144 BSP driver</td>
+<td style="text-align: left;">V1.0.3</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L4xx_Nucleo_144/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">/STM32L4/EEPROM_Emul/STM32L4R5ZI_Nucleo: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations-1">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers-1">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V8.22.1 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.25.0.0 + ST-LINK + Pack Keil STM32L4xx_DFP.2.0.0</li>
+<li>System Workbench for STM32 (SW4STM32) toolchain V2.4 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards-1">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+<li>STM32L4R5ZI-Nucleo144 (MB1312 rev A with ST-Link firmware V2.J29.M18)</li>
+</ul>
+<h2 id="backward-compatibility">Backward Compatibility</h2>
+<p>Backward compatible</p>
+<h2 id="dependencies-1">Dependencies</h2>
+<p>No dependency.</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section1" aria-hidden="true"> <label for="collapse-section1" aria-hidden="true">V1.0.0 / 30-June-2017</label>
+<div>
+<h2 id="main-changes">First Release</h2>
+<li>First official release of X-CUBE-EEPROM package and AN4894 - EEPROM emulation techniques and software for STM32 microcontrollers.</li>
+<h3 id="first-feature"><strong>First feature</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Headline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">EEPROM emulation for STM32L4 Series</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<h2 id="contents">Contents</h2>
+<h3 id="drivers"><strong>Drivers</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cortex-M4 CMSIS</td>
+<td style="text-align: left;">V4.5.0</td>
+<td style="text-align: left;"><a href="Drivers/CMSIS/index.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L4 CMSIS</td>
+<td style="text-align: left;">V1.3.1</td>
+<td style="text-align: left;"><a href="Drivers/Device/ST/STM32L4xx/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">STM32L4XX_HAL_Driver</td>
+<td style="text-align: left;">V1.7.1</td>
+<td style="text-align: left;"><a href="Drivers/STM32L4xx_HAL_Driver/Release_Notes.html">release note</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">STM32L476G-Discovery BSP driver</td>
+<td style="text-align: left;">V2.0.0</td>
+<td style="text-align: left;"><a href="Drivers/BSP/STM32L476G-Discovery/Release_Notes.html">release note</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="projects"><strong>Projects</strong></h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Version</th>
+<th style="text-align: left;">Release note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">EEPROM_Emul/STM32L476G-Discovery: Application to show how to implement the EEPROM emulation API.</td>
+<td style="text-align: left;">V1.0.0</td>
+<td style="text-align: left;">N.A</td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Note: in the table above, components <strong>highlighted</strong> have changed since previous release.</p>
+<h2 id="known-limitations">Known Limitations</h2>
+<p>Nothing to declare.</p>
+<h2 id="development-toolchains-and-compilers">Development Toolchains and Compilers</h2>
+<ul>
+<li>IAR Embedded Workbench for ARM (EWARM) toolchain V7.80.4 + ST-LINK or I-Jet</li>
+<li>RealView Microcontroller Development Kit (MDK-ARM) toolchain V5.23 + ST-LINK + Pack Keil STM32L4xx_DFP.1.4.0</li>
+<li>System Workbench for STM32 (SW4STM32) toolchain V2.0 + ST-Link</li>
+</ul>
+<h2 id="supported-devices-and-boards">Supported Devices and Boards</h2>
+<ul>
+<li>STM32L476G-Discovery (MB1184 rev C with ST-Link firmware V2.J27.M15)</li>
+</ul>
+<h2 id="dependencies">Dependencies</h2>
+<p>No dependency.</p>
+</div>
+</div>
+</section>
+</div>
+<footer class="sticky">
+<div class="columns">
+<div class="column" style="width:95%;">
+<p>For complete documentation on <strong>X-CUBE-EEPROM</strong></mark>, visit:
+<span style="font-color: blue;"><a
+href="https://www.st.com/en/embedded-software/x-cube-eeprom.html">https://www.st.com/en/embedded-software/x-cube-eeprom.html</a></span></p>
+<p><em>This release note uses up to date web standards and, for this
+reason, should not be opened with Internet Explorer but preferably with
+popular browsers such as Google Chrome, Mozilla Firefox, Opera or
+Microsoft Edge.</em></p>
+</div><div class="column" style="width:5%;">
+<p><abbr title="Based on template cx566953 version 2.0">Info</abbr></p>
+</div>
+</div>
+</footer>
+</body>
+</html>
